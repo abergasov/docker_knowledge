@@ -1,0 +1,24 @@
+{
+  "root": "./",
+  "description": "just my knowledge",
+  "styles": {
+    "website": "custom_style.css"
+  },
+  "plugins": [
+    "folding-chapters-2",
+    "theme-code",
+    "back-to-top-button",
+    "copy-code-button",
+    "page-toc"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": false
+    },
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+      "position": "top",
+      "showByDefault": true
+    }
+  }
+}

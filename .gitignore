@@ -1,0 +1,4 @@
+.env
+gitbook/copy_repo/*
+.idea/*
+!gitbook/copy_repo/.gitkeep

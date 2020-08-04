@@ -1,0 +1,40 @@
+.color-theme-2 #book-search-results .search-results ul.search-results-list li.search-results-item {
+    color: #bdcadb;
+}
+
+.color-theme-2 #book-search-input {
+    background-color: #252737;
+}
+
+.color-theme-2 .book-summary {
+    width: 300px;
+}
+
+.color-theme-2 .page-toc {
+    background-color: #252737;
+}
+
+@media screen and (max-width: 600px) {
+    .color-theme-2 .page-toc {
+        display: contents;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .color-theme-2 .page-toc {
+        position: fixed;
+        right: 30px;
+        top: 50px;
+        background-color: #252737;
+    }
+}
+
+@media (max-width: 600px) {
+    .book.with-summary .book-body {
+        -webkit-transform: translate(calc(0% + 300px),0);
+        -moz-transform: translate(calc(0% + 300px),0);
+        -ms-transform: translate(calc(0% + 300px),0);
+        -o-transform: translate(calc(0% + 300px),0);
+        transform: translate(calc(0% + 300px),0);
+    }
+}
