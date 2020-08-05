@@ -25,6 +25,7 @@ clean
 
 cat .env |
   sed -e 's/^KNOWLEDGE_PATH/DOCKER_REPO_PATH/' \
+      -e 's/^ALLOW_IP/ALLOW_IP/' \
       -e 's/^VERSION/GIT_BOOK_VERSION/' >.env.tmp
 
 mv .env.tmp .env
@@ -32,6 +33,9 @@ mv .env.tmp .env
 # shellcheck disable=SC2046
 export $(grep -v '^#' .env | xargs)
 
+# edit nginx
+# shellcheck disable=SC2002
+cat configs/nginx/nginx.conf.sample | sed -e "s/IP_DATA/${ALLOW_IP}/g" > configs/nginx/nginx.conf
 
 # gitbook from container will create work directories. to keep it clean - copy repository to tmp directory
 # erase first
