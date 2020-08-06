@@ -12,6 +12,7 @@
 
 .color-theme-2 .page-toc {
     background-color: #252737;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 600px) {
