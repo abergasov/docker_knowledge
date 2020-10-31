@@ -17,6 +17,8 @@ clean() {
   docker container stop knowledge_proxy_server knowledge_backend
   echo "drop containers"
   docker rm -v knowledge_proxy_server knowledge_backend
+  echo "drop old images"
+  docker rmi $(docker images -f dangling=true -q)
 }
 
 echo "Current env: ${env}"
